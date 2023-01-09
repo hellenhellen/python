@@ -4,6 +4,7 @@ uploaded = files.upload()
 import pandas as pd
 credit_data = pd.read_excel('Credit data.xlsx')
 import numpy as np
+# 通过zScore分数删除异常行
 def use_zscore_find_outliner(data, varabiles):
     current_colume = data[varabiles]
     std = int(np.std(current_colume, ddof=1))
